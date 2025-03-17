@@ -72,7 +72,11 @@ jobs:
           plugin_reactions_limit_discussions_comments: 100
           plugin_reactions_limit_issues: 100
           plugin_repositories: yes
+          plugin_repositories_featured: yuxiaoli/wcf-http, yuxiaoli/onelink, yuxiaoli/dbm-systray
           plugin_repositories_order: featured, pinned, starred, random
+          plugin_repositories_pinned: 6
+          plugin_repositories_random: 1
+          plugin_repositories_starred: 3
           plugin_screenshot: yes
           plugin_screenshot_background: yes
           plugin_screenshot_mode: image
