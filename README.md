@@ -1,7 +1,7 @@
 ## Hi there 👋
-[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=vertical&theme=nord&border=lime)](https://github.com/piyushsuthar/github-readme-quotes)
 <!--https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md-->
 ![Metrics](/github-metrics.svg)
+[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=vertical&theme=nord&border=lime)](https://github.com/piyushsuthar/github-readme-quotes)
 
 <!--
 **yuxiaoli/yuxiaoli** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
