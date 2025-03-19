@@ -1,4 +1,5 @@
 ## Hi there 👋
+[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=vertical&theme=nord&border=lime)](https://github.com/piyushsuthar/github-readme-quotes)
 <!--https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md-->
 ![Metrics](/github-metrics.svg)
 
