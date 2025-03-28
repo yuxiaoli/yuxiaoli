@@ -1,42 +1,6 @@
 ## Hi there 👋
-#### Programming Languages
-![Programming Languages](https://go-skill-icons.vercel.app/api/icons?i=cpp,python,java,javascript)
-
-#### Desktop Frameworks
-![Desktop Frameworks](https://go-skill-icons.vercel.app/api/icons?i=qt,electron)
-
-#### Backend Frameworks
-![Backend Frameworks](https://go-skill-icons.vercel.app/api/icons?i=nodejs,flask,fastapi)
-
-#### Frontend Frameworks
-![Frontend Frameworks](https://go-skill-icons.vercel.app/api/icons?i=vuejs,react,angular,svelte)
-
-#### Mobile Frameworks
-![Mobile Frameworks](https://go-skill-icons.vercel.app/api/icons?i=flutter)
-
-#### Databases
-![Databases](https://go-skill-icons.vercel.app/api/icons?i=sqlite,mysql,dynamodb)
-
-#### Real-Time Brokers
-![Real-Time Brokers](https://go-skill-icons.vercel.app/api/icons?i=kafka)
-
-#### Container Services
-![Container Services](https://go-skill-icons.vercel.app/api/icons?i=docker,kubernetes)
-
-#### Operating Systems
-![Operating Systems](https://go-skill-icons.vercel.app/api/icons?i=windows,apple,linux)
-
-#### Cloud Providers
-![Cloud Providers](https://go-skill-icons.vercel.app/api/icons?i=aws,azure,gcp)
-
-#### Applications/Tools
-![Applications/Tools](https://go-skill-icons.vercel.app/api/icons?i=git,visualstudio,clion,eclipse,vim,jira)
-
-#### CI/CD Tools
-![CI/CD Tools](https://go-skill-icons.vercel.app/api/icons?i=jenkins,gitlab,grafana)
-
-#### Large Language Models
-![Large Language Models](https://go-skill-icons.vercel.app/api/icons?i=chatgpt,gemini,langchain)
+#### My Skills
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=cpp,python,java,javascript,qt,electron,nodejs,flask,fastapi,vuejs,react,angular,svelte,flutter,sqlite,mysql,dynamodb,kafka,docker,kubernetes,windows,apple,linux,aws,azure,gcp,git,visualstudio,clion,eclipse,vim,jira,jenkins,gitlab,grafana,chatgpt,gemini,langchain&perline=8&titles=true)
 
 <!-- --- -->
 
