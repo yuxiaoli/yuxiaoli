@@ -1,4 +1,6 @@
 ## Hi there 👋
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=cpp,python,java,javascript,qt,electron,nodejs,flask,fastapi,vuejs,react,angular,svelte,flutter,sqlite,mysql,dynamodb,kafka,docker,kubernetes,windows,apple,linux,aws,azure,gcp,git,visualstudio,clion,eclipse,vim,jira,jenkins,gitlab,grafana,chatgpt,gemini,langchain)
+
 <!--https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md-->
 ![Metrics](/github-metrics.svg)
 
