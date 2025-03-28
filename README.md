@@ -1,4 +1,4 @@
-## Hi there 👋
+## Hi there <img src="https://github.com/yuxiaoli/yuxiaoli/blob/main/assets/hi.gif" width="24px"><!--👋-->
 #### My Skills
 ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=cpp,python,java,javascript,qt,electron,nodejs,flask,fastapi,vuejs,react,angular,svelte,flutter,sqlite,mysql,dynamodb,kafka,docker,kubernetes,windows,apple,linux,aws,azure,gcp,git,visualstudio,clion,eclipse,vim,jira,jenkins,gitlab,grafana,chatgpt,gemini,langchain&perline=8&titles=true)
 
