@@ -66,7 +66,7 @@ toolbox:
 ## Playground
 
 > [!TIP]
-> Explore my projects, from developer tools and data applications to creative experiments. Some ideas are best understood by building them—this is where I put that into practice.
+> Explore my projects, from developer tools and data applications to creative experiments. Some ideas are best understood by building them, this is where I put that into practice.
 
 ### Interfaces & experiments
 
