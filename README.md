@@ -66,9 +66,8 @@ toolbox:
 ## Playground
 
 > [!TIP]
-> **Step outside the README.**
-> Explore [Morph](https://morph.vectorindex.cloud/) for interactive particle shapes, or open the [Morph Controller](https://yuxiaoli.github.io/morph-controller/) to tune them.
-> More projects live in [My Work at Vector Index](https://vectorindex.cloud).
+> **Explore what I build.**
+> A collection of interactive experiments, data tools, APIs and terminal utilities. Browse the projects below, or explore more in [My Work at Vector Index](https://vectorindex.cloud/work).
 
 ### Interfaces & experiments
 
@@ -93,6 +92,7 @@ toolbox:
 
 ### Terminal & desktop
 
+- **[Terminal Trove Catalog](https://cli.vectorindex.cloud/)** · Searchable terminal-tool catalog with category and platform filters, installation references and a JSON API.
 - **[term-render](https://github.com/yuxiaoli/term-render)** · Dispatch files to terminal viewers. [Releases](https://github.com/yuxiaoli/term-render/releases/latest)
 - **[OpenVPN Client](https://github.com/yuxiaoli/openvpn-client)** · Python CLI, shell and Textual TUI. [Releases](https://github.com/yuxiaoli/openvpn-client/releases/tag/v0.1.0)
 - **[JSON Manager](https://github.com/yuxiaoli/json-manager)** · Command-line JSON tools.
