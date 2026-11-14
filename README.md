@@ -91,7 +91,7 @@ toolbox:
 
 ### Terminal & desktop
 
-- **[Terminal Trove Catalog](https://cli.vectorindex.cloud/)** · Searchable terminal-tool catalog with category and platform filters, installation references and a JSON API.
+- **[Developer Toolkit](https://cli.vectorindex.cloud/)** · Searchable terminal-tool catalog with category and platform filters, installation references and a JSON API.
 - **[term-render](https://github.com/yuxiaoli/term-render)** · Dispatch files to terminal viewers. [Releases](https://github.com/yuxiaoli/term-render/releases/latest)
 - **[OpenVPN Client](https://github.com/yuxiaoli/openvpn-client)** · Python CLI, shell and Textual TUI. [Releases](https://github.com/yuxiaoli/openvpn-client/releases/tag/v0.1.0)
 - **[JSON Manager](https://github.com/yuxiaoli/json-manager)** · Command-line JSON tools.
