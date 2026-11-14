@@ -66,8 +66,7 @@ toolbox:
 ## Playground
 
 > [!TIP]
-> **Explore what I build.**
-> A collection of interactive experiments, data tools, APIs and terminal utilities. Browse the projects below, or explore more in [My Work at Vector Index](https://vectorindex.cloud/work).
+> Explore my projects below, from developer tools and data applications to creative experiments.
 
 ### Interfaces & experiments
 
