@@ -35,6 +35,22 @@ def window(item, now):
         raise ValueError()
     return start, reset
 
+def paid_window(item, now):
+    if 'start' in item or 'reset' in item:
+        return window(item, now)
+    day = item['billing_day']
+    if type(day) is not int or not 1 <= day <= 28:
+        raise ValueError()
+    month = now.year * 12 + now.month - 1
+
+    def boundary(index):
+        year, offset = divmod(index, 12)
+        return dt.datetime(year, offset + 1, day, tzinfo=UTC)
+
+    if now < boundary(month):
+        month -= 1
+    return boundary(month), boundary(month + 1)
+
 def github(item, now):
     _, reset = window(item, now)
     observed = when(item['observed_at'])
@@ -71,7 +87,7 @@ def cloudflare(item, now, token, kind, get=query):
         start = now.replace(hour=0, minute=0, second=0, microsecond=0)
         reset = start + dt.timedelta(days=1)
     elif plan == 'paid':
-        start, reset = window(item, now)
+        start, reset = paid_window(item, now)
         if any((start.hour,start.minute,start.second,start.microsecond,reset.hour,reset.minute,reset.second,reset.microsecond)):
             raise ValueError()
     else:

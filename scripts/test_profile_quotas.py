@@ -5,7 +5,7 @@ import json
 from unittest.mock import patch
 import xml.etree.ElementTree as ET
 
-from profile_quotas import UTC, cloudflare, github, query, render, safe
+from profile_quotas import UTC, cloudflare, github, paid_window, query, render, safe
 
 NOW = dt.datetime(2026, 11, 23, 12, tzinfo=UTC)
 CF = {'plan':'paid','account':'f'*32,'start':'2026-11-15T00:00:00Z','reset':'2026-12-15T00:00:00Z'}
@@ -54,3 +54,14 @@ class Quotas(unittest.TestCase):
 
     def test_reset_is_always_in_days(self):
         self.assertIn('resets in 9 days',render([('Actions',github(GH,NOW))],NOW))
+
+    def test_paid_anchor_handles_year_rollover(self):
+        anchor = {'billing_day': 15}
+        for month, year, expect in ((12,2026,(12,2026,1,2027)),(1,2027,(1,2027,2,2027))):
+            start, end = paid_window(anchor,dt.datetime(year,month,15,tzinfo=UTC))
+            self.assertEqual((start.month,start.year,end.month,end.year),expect)
+        start, end = paid_window(anchor,dt.datetime(2027,1,1,tzinfo=UTC))
+        self.assertEqual((start.month,start.year,end.month,end.year),(12,2026,1,2027))
+        self.assertEqual(paid_window(CF,NOW)[0].day,15)
+        self.assertIsNone(safe(paid_window,{'billing_day':29},NOW))
+        self.assertIsNone(safe(paid_window,{'billing_day':15,'start':CF['start']},NOW))
