@@ -75,9 +75,12 @@ class Quotas(unittest.TestCase):
         self.assertEqual(root.attrib['viewBox'],'0 0 480 371')
         self.assertEqual(root.attrib['width'],'480')
         tracks = [rect for rect in root.findall('{*}rect') if rect.get('opacity') == '.30']
-        self.assertEqual([(int(r.get('x')),int(r.get('y')),int(r.get('width')),int(r.get('height'))) for r in tracks],
-                         [(14,80,452,11),(14,145,452,11),(14,210,452,11),(14,275,452,11),(14,340,452,11)])
-        self.assertEqual(int(root.get('height'))-int(tracks[-1].get('y'))-int(tracks[-1].get('height')),20)
+        self.assertEqual([(int(r.get('x')),float(r.get('y')),int(r.get('width')),float(r.get('height'))) for r in tracks],
+                         [(14,82.875 + 65*i,452,5.25) for i in range(5)])
+        self.assertEqual(float(root.get('height'))-float(tracks[-1].get('y'))-float(tracks[-1].get('height')),22.875)
+        for rect in root.findall('{*}rect'):
+            self.assertEqual(rect.get('height'), '5.25')
+            self.assertEqual(rect.get('rx'), '2.625')
         details = [int(t.get('y')) for t in root.findall('{*}text') if t.get('class')=='muted']
         self.assertEqual(details,[72,137,202,267,332])
 

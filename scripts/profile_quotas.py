@@ -186,8 +186,10 @@ def countdown_label(reset, now):
 
 def render(rows, now, cf_observed=None):
     first_row_y, row_spacing = 54, 65
-    detail_offset, track_offset, track_height, bottom_padding = 18, 26, 11, 20
-    height = first_row_y + max(0, len(rows) - 1) * row_spacing + track_offset + track_height + bottom_padding
+    detail_offset, track_offset, track_slot, bottom_padding = 18, 26, 11, 20
+    track_height = 5.25
+    track_radius = track_height / 2
+    height = first_row_y + max(0, len(rows) - 1) * row_spacing + track_offset + track_slot + bottom_padding
     lines = [f'<svg xmlns="http://www.w3.org/2000/svg" width="480" height="{height}" viewBox="0 0 480 {height}" role="img" aria-label="Service quota usage">',
         '<style>text{font:13px system-ui;fill:#24292f}.muted{fill:#57606a;font-size:11px}@media(prefers-color-scheme:dark){text{fill:#c9d1d9}.muted{fill:#8b949e}}</style>',
         '<text x="14" y="22" font-weight="600">Service quota usage</text>']
@@ -197,7 +199,8 @@ def render(rows, now, cf_observed=None):
     for i, (name, row) in enumerate(rows):
         y = first_row_y + i * row_spacing
         lines.append(f'<text x="14" y="{y}">{html.escape(name)}</text>')
-        lines.append(f'<rect x="14" y="{y+track_offset}" width="452" height="{track_height}" rx="3" fill="#8b949e" opacity=".30"/>')
+        track_y = y + track_offset + (track_slot - track_height) / 2
+        lines.append(f'<rect x="14" y="{track_y}" width="452" height="{track_height}" rx="{track_radius}" fill="#8b949e" opacity=".30"/>')
         if row is None:
             msg = 'Unavailable'
         else:
@@ -205,7 +208,7 @@ def render(rows, now, cf_observed=None):
             msg = label if reset is None else f'{label} | resets in {countdown_label(reset, now)}'
             color = '#056dff' if name.startswith('Cloudflare ') else '#40c463'
             width = 452 * min(1,used/cap)
-            lines.append(f'<rect x="14" y="{y+track_offset}" width="{width:.2f}" height="{track_height}" rx="3" fill="{color}"/>')
+            lines.append(f'<rect x="14" y="{track_y}" width="{width:.2f}" height="{track_height}" rx="{track_radius}" fill="{color}"/>')
         lines.append(f'<text class="muted" x="14" y="{y+detail_offset}">{html.escape(msg)}</text>')
     return '\n'.join(lines+['</svg>',''])
 
@@ -234,7 +237,7 @@ def main():
     cf_results = {kind:safe(cloudflare,cf,now,token,kind) for kind in ('cpu','kv','kv_reads','browser')}
     rows = profile_rows(github_row,cf_results['cpu'],cf_results['kv'],
                         kv_reads=cf_results['kv_reads'],browser_run=cf_results['browser'])
-    if not publish(rows,now,Path('profile-quotas-blue.svg')):
+    if not publish(rows,now,Path('profile-quotas-compact.svg')):
         raise SystemExit('Quota card unchanged: one or more metrics unavailable.')
 
 if __name__ == '__main__':

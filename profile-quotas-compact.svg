@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="371" viewBox="0 0 480 371" role="img" aria-label="Service quota usage">
+<style>text{font:13px system-ui;fill:#24292f}.muted{fill:#57606a;font-size:11px}@media(prefers-color-scheme:dark){text{fill:#c9d1d9}.muted{fill:#8b949e}}</style>
+<text x="14" y="22" font-weight="600">Service quota usage</text>
+<text class="muted" x="466" y="22" text-anchor="end">Cloudflare as of Nov 23, 23:16 UTC</text>
+<text x="14" y="54">GitHub Actions (included compute snapshot)</text>
+<rect x="14" y="82.875" width="452" height="5.25" rx="2.625" fill="#8b949e" opacity=".30"/>
+<rect x="14" y="82.875" width="322.68" height="5.25" rx="2.625" fill="#40c463"/>
+<text class="muted" x="14" y="72">71.39% used; 3,139 metered min | Nov 2026 as of Nov 23, 04:18 UTC</text>
+<text x="14" y="119">Cloudflare Containers</text>
+<rect x="14" y="147.875" width="452" height="5.25" rx="2.625" fill="#8b949e" opacity=".30"/>
+<rect x="14" y="147.875" width="4.61" height="5.25" rx="2.625" fill="#056dff"/>
+<text class="muted" x="14" y="137">3.8 / 375 vCPU-min | resets in 1 hour</text>
+<text x="14" y="184">Cloudflare KV reads</text>
+<rect x="14" y="212.875" width="452" height="5.25" rx="2.625" fill="#8b949e" opacity=".30"/>
+<rect x="14" y="212.875" width="4.10" height="5.25" rx="2.625" fill="#056dff"/>
+<text class="muted" x="14" y="202">90,700 / 10,000,000 reads (analytics) | resets in 1 hour</text>
+<text x="14" y="249">Cloudflare KV writes</text>
+<rect x="14" y="277.875" width="452" height="5.25" rx="2.625" fill="#8b949e" opacity=".30"/>
+<rect x="14" y="277.875" width="2.23" height="5.25" rx="2.625" fill="#056dff"/>
+<text class="muted" x="14" y="267">4,930 / 1,000,000 writes (analytics) | resets in 1 hour</text>
+<text x="14" y="314">Cloudflare Browser Run</text>
+<rect x="14" y="342.875" width="452" height="5.25" rx="2.625" fill="#8b949e" opacity=".30"/>
+<rect x="14" y="342.875" width="12.39" height="5.25" rx="2.625" fill="#056dff"/>
+<text class="muted" x="14" y="332">16.4 / 600 browser min (analytics) | resets in 1 hour</text>
+</svg>
