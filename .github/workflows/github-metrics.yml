@@ -214,7 +214,6 @@ jobs:
       - name: Generate service quota card
         if: github.event_name != 'pull_request' && github.ref_name == github.event.repository.default_branch
         env:
-          PROFILE_GITHUB_QUOTA: ${{ secrets.PROFILE_GITHUB_QUOTA }}
           PROFILE_CF_QUOTA: ${{ secrets.PROFILE_CF_QUOTA }}
           PROFILE_CF_ANALYTICS_TOKEN: ${{ secrets.PROFILE_CF_ANALYTICS_TOKEN }}
         run: python3 scripts/profile_quotas.py
