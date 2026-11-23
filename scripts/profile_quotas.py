@@ -234,7 +234,7 @@ def main():
     cf_results = {kind:safe(cloudflare,cf,now,token,kind) for kind in ('cpu','kv','kv_reads','browser')}
     rows = profile_rows(github_row,cf_results['cpu'],cf_results['kv'],
                         kv_reads=cf_results['kv_reads'],browser_run=cf_results['browser'])
-    if not publish(rows,now,Path('profile-quotas-v2.svg')):
+    if not publish(rows,now,Path('profile-quotas-blue.svg')):
         raise SystemExit('Quota card unchanged: one or more metrics unavailable.')
 
 if __name__ == '__main__':
