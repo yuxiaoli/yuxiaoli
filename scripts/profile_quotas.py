@@ -56,7 +56,7 @@ def query(body, args, token, key, field):
     if len(accounts) != 1:
         raise ValueError()
     rows = accounts[0][key]
-    if len(rows) >= 100:
+    if not rows or len(rows) >= 100:
         raise ValueError()
     values = [r['sum'][field] for r in rows]
     if not all(map(number, values)):
@@ -106,11 +106,11 @@ def render(rows, now):
             msg = 'Unavailable'
         else:
             used, cap, label, reset = row
-            remaining = math.ceil((reset-now).total_seconds()/3600)
-            countdown = f'{remaining}h' if remaining <= 24 else f'{math.ceil(remaining/24)}d'
+            remaining = math.ceil((reset-now).total_seconds()/86400)
+            countdown = '1 day' if remaining == 1 else f'{remaining} days'
             msg = f'{label} | resets in {countdown}'
             width = 452 * min(1,used/cap)
-            lines.append(f'<rect x="14" y="{y+21}" width="{width:.2f}" height="6" rx="3" fill="#2da44e"/>')
+            lines.append(f'<rect x="14" y="{y+21}" width="{width:.2f}" height="6" rx="3" fill="#40c463"/>')
         lines.append(f'<text class="muted" x="14" y="{y+15}">{html.escape(msg)}</text>')
     return '\n'.join(lines+['</svg>',''])
 

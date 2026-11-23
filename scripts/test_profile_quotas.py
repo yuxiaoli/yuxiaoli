@@ -1,8 +1,11 @@
 import datetime as dt
 import unittest
+import io
+import json
+from unittest.mock import patch
 import xml.etree.ElementTree as ET
 
-from profile_quotas import UTC, cloudflare, github, render, safe
+from profile_quotas import UTC, cloudflare, github, query, render, safe
 
 NOW = dt.datetime(2026, 11, 23, 12, tzinfo=UTC)
 CF = {'plan':'paid','account':'f'*32,'start':'2026-11-15T00:00:00Z','reset':'2026-12-15T00:00:00Z'}
@@ -26,7 +29,8 @@ class Quotas(unittest.TestCase):
         row = cloudflare({**CF,'plan':'free'},NOW,'private-token','kv',get=lambda *_:25)
         svg = render([('KV',row)],NOW)
         self.assertIn('25 / 1,000',svg)
-        self.assertIn('12h',svg)
+        self.assertIn('resets in 1 day',svg)
+        self.assertNotIn('12h',svg)
         for value in ('f'*32,'private-token','2026-11-15','2026-12-15'):
             self.assertNotIn(value,svg)
 
@@ -41,3 +45,12 @@ class Quotas(unittest.TestCase):
             raise ValueError('private provider payload')
         self.assertIsNone(safe(cloudflare,CF,NOW,'secret','cpu',blocked))
         self.assertEqual(cloudflare(CF,NOW,'secret','kv',lambda *_:0)[1],1_000_000)
+
+    def test_empty_analytics_is_unknown_but_explicit_zero_is_valid(self):
+        for rows, expected in (([],None),([{'sum':{'requests':0}}],0)):
+            payload = {'data':{'viewer':{'accounts':[{'dataset':rows}]}}}
+            with patch('urllib.request.urlopen',return_value=io.BytesIO(json.dumps(payload).encode())):
+                self.assertEqual(safe(query,'q',{},'token','dataset','requests'),expected)
+
+    def test_reset_is_always_in_days(self):
+        self.assertIn('resets in 9 days',render([('Actions',github(GH,NOW))],NOW))
