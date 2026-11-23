@@ -95,7 +95,7 @@ class Quotas(unittest.TestCase):
                 ('Cloudflare KV writes',(10,1_000,'10 / 1,000 writes',reset))]
         svg = render(rows,NOW)
         self.assertEqual(svg.count('fill="#40c463"'),1)
-        self.assertEqual(svg.count('fill="#f38020"'),2)
+        self.assertEqual(svg.count('fill="#056dff"'),2)
         self.assertIn('25 / 100,000 reads',svg)
         self.assertIn('10 / 1,000 writes',svg)
 
@@ -106,7 +106,7 @@ class Quotas(unittest.TestCase):
         reset = NOW+dt.timedelta(hours=9)
         live = render(profile_rows(None,None,None,browser_run=(1,4,'1 / 4 hours',reset)),NOW)
         self.assertIn('1 / 4 hours | resets in 9 hours',live)
-        self.assertIn('fill="#f38020"',live)
+        self.assertIn('fill="#056dff"',live)
         self.assertEqual(live.count('Unavailable'),4)
 
     def test_kv_requests_and_caps_are_independent(self):
