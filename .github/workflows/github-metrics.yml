@@ -197,3 +197,33 @@ jobs:
           plugin_stars_limit: 4
           plugin_traffic: yes
 
+  profile-quotas:
+    needs: github-metrics
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: write
+    steps:
+      - name: Check out updated profile branch
+        if: github.event_name != 'pull_request' && github.ref_name == github.event.repository.default_branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Generate service quota card
+        if: github.event_name != 'pull_request' && github.ref_name == github.event.repository.default_branch
+        env:
+          PROFILE_GITHUB_QUOTA: ${{ secrets.PROFILE_GITHUB_QUOTA }}
+          PROFILE_CF_QUOTA: ${{ secrets.PROFILE_CF_QUOTA }}
+          PROFILE_CF_ANALYTICS_TOKEN: ${{ secrets.PROFILE_CF_ANALYTICS_TOKEN }}
+        run: python3 scripts/profile_quotas.py
+
+      - name: Publish only the quota SVG
+        if: github.event_name != 'pull_request' && github.ref_name == github.event.repository.default_branch
+        run: |
+          git add -- profile-quotas.svg
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Update profile quota card' -- profile-quotas.svg
+          git push origin HEAD
+

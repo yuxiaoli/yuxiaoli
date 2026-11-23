@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="205" viewBox="0 0 480 205" role="img" aria-label="Service quota usage">
+<style>text{font:13px system-ui;fill:#24292f}.muted{fill:#57606a;font-size:11px}@media(prefers-color-scheme:dark){text{fill:#c9d1d9}.muted{fill:#8b949e}}</style>
+<text x="14" y="22" font-weight="600">Service quota usage</text>
+<text x="14" y="49">GitHub Actions (free allowance)</text>
+<rect x="14" y="70" width="452" height="6" rx="3" fill="#8b949e" opacity=".30"/>
+<text class="muted" x="14" y="64">Unavailable</text>
+<text x="14" y="99">Cloudflare Containers</text>
+<rect x="14" y="120" width="452" height="6" rx="3" fill="#8b949e" opacity=".30"/>
+<text class="muted" x="14" y="114">Unavailable</text>
+<text x="14" y="149">Cloudflare KV</text>
+<rect x="14" y="170" width="452" height="6" rx="3" fill="#8b949e" opacity=".30"/>
+<text class="muted" x="14" y="164">Unavailable</text>
+</svg>
