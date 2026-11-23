@@ -221,8 +221,8 @@ jobs:
       - name: Publish only the quota SVG
         if: github.event_name != 'pull_request' && github.ref_name == github.event.repository.default_branch
         run: |
-          git add -- profile-quotas.svg
+          git add -- profile-quotas-v2.svg
           if git diff --cached --quiet; then exit 0; fi
-          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Update profile quota card' -- profile-quotas.svg
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Update profile quota card' -- profile-quotas-v2.svg
           git push origin HEAD
 
