@@ -203,7 +203,7 @@ def render(rows, now, cf_observed=None):
         else:
             used, cap, label, reset = row
             msg = label if reset is None else f'{label} | resets in {countdown_label(reset, now)}'
-            color = '#f38020' if name.startswith('Cloudflare ') else '#40c463'
+            color = '#056dff' if name.startswith('Cloudflare ') else '#40c463'
             width = 452 * min(1,used/cap)
             lines.append(f'<rect x="14" y="{y+track_offset}" width="{width:.2f}" height="{track_height}" rx="3" fill="{color}"/>')
         lines.append(f'<text class="muted" x="14" y="{y+detail_offset}">{html.escape(msg)}</text>')
