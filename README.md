@@ -63,7 +63,7 @@ toolbox:
      Original capture remains enabled and is preserved in github-metrics.svg. -->
 ![Metrics](/github-metrics-profile.svg)
 
-![Service quota usage](/profile-quotas.svg)
+![Service quota usage](/profile-quotas-v2.svg)
 
 ## Playground
 
