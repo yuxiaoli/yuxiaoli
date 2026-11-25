@@ -95,6 +95,8 @@ toolbox:
 - **[JSON Registry](https://json-registry.cf-io.workers.dev/)** · Versioned JSON schemas and validated JSON-object storage.
 - **[OpenVPN Globe](https://openvpn-globe.pages.dev/)** · A globe and searchable directory of public VPN-server observations.
 - **[Expo Calendar](https://expo-calendar.cf-io.workers.dev/)** · A bilingual calendar for Las Vegas and worldwide trade shows, with date filters, RSS, and a JSON API.
+- **[Vegas Parties](https://yuxiaoli.github.io/vegas-party-menu/)** · A bilingual weekly guide to Las Vegas nightlife, with date and event filters and links to DJ and venue profiles. [Source](https://github.com/yuxiaoli/vegas-party-menu)
+- **[API Explorer (Preview)](https://api-explorer.cf-io.workers.dev/)** · A live sample-data preview for searching API services and endpoints and reviewing documentation, authentication requirements, and recorded evidence. [API docs](https://api-explorer.cf-io.workers.dev/docs)
 
 ### Terminal & desktop
 
