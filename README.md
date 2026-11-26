@@ -85,18 +85,18 @@ toolbox:
 ### Reading, data & APIs
 
 - **[Context](https://context.vectorindex.cloud/)** · Multilingual AI and technology reading with sources and RSS.
-- **[CS Notes](https://yuxiaoli.github.io/CS-Notes/)** · A public fork of CyC2018’s computer science notes, with learning paths and references for algorithms, systems, and interviews. [Source](https://github.com/yuxiaoli/CS-Notes) · [Upstream](https://github.com/CyC2018/CS-Notes)
 - **[Paper Feed](https://paper-feed.cf-io.workers.dev/)** · An arXiv reader with topic-based paper feeds, search, and RSS and JSON output.
-- **[Web3 学习笔记](https://yuxiaoli.github.io/foundry-full-course-cu/)** · Chinese-language notes on blockchains, Ethereum, and smart contracts, adapted from Cyfrin’s Foundry course. [Cyfrin Updraft](https://updraft.cyfrin.io/courses/foundry)
 - **[GitHub Trending RSS](https://github-trending-rss.cf-io.workers.dev/)** · GitHub Trending snapshots in RSS and JSON Feed, with overall and programming-language feeds.
 - **[Awesome SDD](https://yuxiaoli.github.io/awesome-spec-driven-development/)** · A multilingual collection of spec-driven development resources. [Source](https://github.com/yuxiaoli/awesome-spec-driven-development)
 - **[Gutenberg](https://gutenberg-catalog.cf-io.workers.dev/app/)** · Project Gutenberg catalog search and API explorer.
 - **[Proxy API Pages](https://yuxiaoli.github.io/proxy-api-pages/)** · A web client for HTML transformation, cache and browser-service operations. [Source](https://github.com/yuxiaoli/proxy-api-pages)
 - **[JSON Registry](https://json-registry.cf-io.workers.dev/)** · Versioned JSON schemas and validated JSON-object storage.
+- **[API Explorer](https://api-explorer.cf-io.workers.dev/)** · A live sample-data preview for searching API services and endpoints and reviewing documentation, authentication requirements, and recorded evidence. [API docs](https://api-explorer.cf-io.workers.dev/docs)
+- **[CS Notes](https://yuxiaoli.github.io/CS-Notes/)** · A public fork of CyC2018’s computer science notes, with learning paths and references for algorithms, systems, and interviews. [Source](https://github.com/yuxiaoli/CS-Notes) · [Upstream](https://github.com/CyC2018/CS-Notes)
+- **[Web3 学习笔记](https://yuxiaoli.github.io/foundry-full-course-cu/)** · Chinese-language notes on blockchains, Ethereum, and smart contracts, adapted from Cyfrin’s Foundry course. [Cyfrin Updraft](https://updraft.cyfrin.io/courses/foundry)
 - **[OpenVPN Globe](https://openvpn-globe.pages.dev/)** · A globe and searchable directory of public VPN-server observations.
 - **[Expo Calendar](https://expo-calendar.cf-io.workers.dev/)** · A bilingual calendar for Las Vegas and worldwide trade shows, with date filters, RSS, and a JSON API.
 - **[Vegas Parties](https://yuxiaoli.github.io/vegas-party-menu/)** · A bilingual weekly guide to Las Vegas nightlife, with date and event filters and links to DJ and venue profiles. [Source](https://github.com/yuxiaoli/vegas-party-menu)
-- **[API Explorer (Preview)](https://api-explorer.cf-io.workers.dev/)** · A live sample-data preview for searching API services and endpoints and reviewing documentation, authentication requirements, and recorded evidence. [API docs](https://api-explorer.cf-io.workers.dev/docs)
 
 ### Terminal & desktop
 
